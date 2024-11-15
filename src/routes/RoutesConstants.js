@@ -5,13 +5,13 @@ import PortfolioDetail from "../pages/PortfolioDetail";
 import AboutDetail from "../pages/AboutDetail";
 // import Services from "../pages/Services";
 
-const Landing = React.lazy(() => import("../pages/Landing"));
+const Portfolio = React.lazy(() => import("../pages/Portfolio"));
 const Services = React.lazy(() => import("../pages/Services"));
 const routes = [
   {
     path: "/",
     exact: false,
-    element: Landing,
+    element: Portfolio,
     isAuthenticated: false,
     isCommon: true,
   },

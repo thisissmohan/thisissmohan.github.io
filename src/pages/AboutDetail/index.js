@@ -8,7 +8,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../../common/footer";
 import Linkedin from "../../assets/images/linkedin.png";
 import Opportunity from "../../assets/images/opportunity.png";
@@ -56,7 +56,7 @@ const cardData2 = [
       "At Software Group in Chennai, I was a full stack developer managing internal products and a bank project in SA. I handled Unified Solutions and Platform Admin portals, developed a savings/loan USSD functionality, and worked with MySQL and Redis.",
   },
   {
-    title: "Full Stack Developer | Teknuance Info Solutions Pvt Ltd",
+    title: "Full Stack Developer | Tek nuance Info Solutions Pvt Ltd",
     dob: "2019-2020",
     subtitle:
       "At Tek nuance Info Solutions Pvt Ltd, I led a team of 8-10 developers, managing quality, schedules, and risks, while developing a chat application with call and video features and using Redis Graph.",
@@ -90,6 +90,9 @@ const fadeUpVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 const AboutDetail = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);  
+  }, []);
   return (
     <Box sx={{ marginTop: { xs: 3, md: 7 }, marginBottom: 10 }}>
       <Container>

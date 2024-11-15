@@ -8,7 +8,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Ivp from "../../assets/images/ivp.png";
@@ -57,11 +57,7 @@ const cardData1 = [
     subtitle: "Web App",
     image: AutoShop,
   },
-  {
-    title: "Momekz",
-    subtitle: "Web App",
-    image: Momekz,
-  },
+ 
   {
     title: "TheWickedMonarch",
     subtitle: "Web App",
@@ -71,6 +67,11 @@ const cardData1 = [
     title: "PawpackJP",
     subtitle: "WEB APP",
     image: Pawdog,
+  },
+  {
+    title: "Momekz",
+    subtitle: "Web App",
+    image: Momekz,
   },
   {
     title: "Plspeak",
@@ -84,9 +85,11 @@ const cardData1 = [
   },
 ];
 
-const Landing = () => {
+const Portfolio = () => {
   const navigate = useNavigate();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);  
+  }, []);
   return (
     <Box sx={{ marginTop: { xs: 3, md: 7 } }}>
       <Container>
@@ -156,8 +159,8 @@ const Landing = () => {
                   item
                   xs={12}
                   key={index}
-                  onClick={() => navigate("/portfolio-detail")}
-                >
+                  sx={{ cursor: "pointer" }}
+                  onClick={() => navigate("/portfolio-detail", { state: { card } })}                >
                   <motion.div
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -293,7 +296,14 @@ const Landing = () => {
 
             <Grid container spacing={3}>
               {cardData1.map((card, index) => (
-                <Grid item xs={12} sm={6} key={index}>
+                <Grid
+                  item
+                  xs={12}
+                  sm={6}
+                  key={index}
+                  sx={{ cursor: "pointer" }}
+                  onClick={() => navigate("/portfolio-detail", { state: { card } })}
+                  >
                   <motion.div
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -364,4 +374,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Portfolio;
