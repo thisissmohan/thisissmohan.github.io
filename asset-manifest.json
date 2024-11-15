@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/github.io/thisissmohan.github.io/static/css/main.f855e6bc.css",
-    "main.js": "/github.io/thisissmohan.github.io/static/js/main.b3d9599c.js",
-    "static/js/381.7c9e949a.chunk.js": "/github.io/thisissmohan.github.io/static/js/381.7c9e949a.chunk.js",
-    "static/js/718.9332e6d5.chunk.js": "/github.io/thisissmohan.github.io/static/js/718.9332e6d5.chunk.js",
-    "static/js/453.5dba6bc4.chunk.js": "/github.io/thisissmohan.github.io/static/js/453.5dba6bc4.chunk.js",
+    "main.js": "/github.io/thisissmohan.github.io/static/js/main.22bc2781.js",
+    "static/js/381.9631f6f8.chunk.js": "/github.io/thisissmohan.github.io/static/js/381.9631f6f8.chunk.js",
+    "static/js/718.ed73c892.chunk.js": "/github.io/thisissmohan.github.io/static/js/718.ed73c892.chunk.js",
+    "static/js/453.7361e62e.chunk.js": "/github.io/thisissmohan.github.io/static/js/453.7361e62e.chunk.js",
     "static/media/corr.png": "/github.io/thisissmohan.github.io/static/media/corr.0a29fda66a2e7a189a8c.png",
     "static/media/pawdog.png": "/github.io/thisissmohan.github.io/static/media/pawdog.db7a6532376bdc4e5532.png",
     "static/media/momekzMobile.png": "/github.io/thisissmohan.github.io/static/media/momekzMobile.05520e425538e5f2d508.png",
@@ -20,13 +20,13 @@
     "static/media/opportunity.png": "/github.io/thisissmohan.github.io/static/media/opportunity.59d21a3ec553463776e4.png",
     "index.html": "/github.io/thisissmohan.github.io/index.html",
     "main.f855e6bc.css.map": "/github.io/thisissmohan.github.io/static/css/main.f855e6bc.css.map",
-    "main.b3d9599c.js.map": "/github.io/thisissmohan.github.io/static/js/main.b3d9599c.js.map",
-    "381.7c9e949a.chunk.js.map": "/github.io/thisissmohan.github.io/static/js/381.7c9e949a.chunk.js.map",
-    "718.9332e6d5.chunk.js.map": "/github.io/thisissmohan.github.io/static/js/718.9332e6d5.chunk.js.map",
-    "453.5dba6bc4.chunk.js.map": "/github.io/thisissmohan.github.io/static/js/453.5dba6bc4.chunk.js.map"
+    "main.22bc2781.js.map": "/github.io/thisissmohan.github.io/static/js/main.22bc2781.js.map",
+    "381.9631f6f8.chunk.js.map": "/github.io/thisissmohan.github.io/static/js/381.9631f6f8.chunk.js.map",
+    "718.ed73c892.chunk.js.map": "/github.io/thisissmohan.github.io/static/js/718.ed73c892.chunk.js.map",
+    "453.7361e62e.chunk.js.map": "/github.io/thisissmohan.github.io/static/js/453.7361e62e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.b3d9599c.js"
+    "static/js/main.22bc2781.js"
   ]
 }
