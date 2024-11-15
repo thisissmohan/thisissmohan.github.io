@@ -43,7 +43,7 @@ function Header() {
       position="static"
       sx={{
         minHeight: { xs: "0px", md: "100px" },
-        backgroundImage: "linear-gradient(250deg, #333 50%, #000 0%)",
+        backgroundImage: "linear-gradient(250deg, #0C267D 67%, #210957 0%)",
       }}
     >
       <Container maxWidth="lg">
@@ -66,9 +66,15 @@ function Header() {
                 height: "30px",
                 borderRadius: 35,
                 objectFit: "cover",
+                borderColor: "gray",
+                borderStyle: "solid",
+                borderWidth: 1,
               }}
             />
-            <Typography>Mohan.S</Typography>
+            <Typography
+            sx={{
+              fontFamily: '"Inter", sans-serif',
+            }}>Mohan.S</Typography>
           </Stack>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -94,7 +100,7 @@ function Header() {
               },
             }}
           >
-            <Stack direction="row" sx={{ position: "absolute", top: 33 }}>
+            <Stack direction="row">
               {pages.map((page) => (
                 <Button
                   key={page}
@@ -107,6 +113,7 @@ function Header() {
                     fontSize: 16,
                     marginLeft: 2,
                     marginRight: 2,
+                    fontFamily: '"Inter", sans-serif',
                     transition: "color 0.3s ease", // Smooth transition for color change
                     "&:hover": {
                       color: "#fff", // White color on hover
@@ -120,8 +127,10 @@ function Header() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }} onClick={() => navigate("/contact")}>
-            <Stack sx={{ backgroundColor: "#000", borderRadius: 3 }}>
-              <Typography py={1} px={4}>
+            <Stack sx={{ backgroundColor: "#4C566F", borderRadius: 3 ,}}>
+              <Typography py={1} px={4} sx={{
+                fontFamily: '"Inter", sans-serif'
+              }}>
                 Let's talk
               </Typography>
             </Stack>
@@ -169,7 +178,13 @@ function Header() {
                 objectFit: "cover",
               }}
             />
-            <Typography>Mohan.S</Typography>
+            <Typography
+              sx={{
+                fontFamily: '"Inter", sans-serif',
+              }}
+            >
+              Mohan.S
+            </Typography>
           </Stack>
 
           <IconButton onClick={handleDrawerToggle} sx={{ color: "white" }}>

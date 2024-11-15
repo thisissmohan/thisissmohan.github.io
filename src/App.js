@@ -21,7 +21,7 @@ function App() {
     <div
       className="App"
       style={{
-        backgroundImage: "linear-gradient(250deg, #333 50%, #000 0%)",
+        backgroundImage: "linear-gradient(250deg, #0C267D 67%, #210957 0%)",
       }}
     >
       <ThemeProvider theme={theme}>

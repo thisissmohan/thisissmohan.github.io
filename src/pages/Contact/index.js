@@ -1,4 +1,15 @@
-import { Box, Button, Card, CardContent, CardMedia, Container, Grid, Stack, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Container,
+  Grid,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React, { useEffect } from "react";
 import { motion } from "framer-motion"; // Import motion for animations
 import Footer from "../../common/footer";
@@ -53,7 +64,7 @@ const Contact = () => {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5, duration: 0.5 }} // Delay for staggered animation
+                  transition={{ delay: 0.5, duration: 0.5 }}
                 >
                   <Stack spacing={6}>
                     {data.map((item, index) => (
@@ -69,12 +80,15 @@ const Contact = () => {
                         >
                           <Stack
                             sx={{
-                              backgroundColor: "#181818",
+                              backgroundColor: "rgba(76, 86, 111, 0.5)",
+                              backdropFilter: "blur(1px)",
                               padding: 3,
                               borderRadius: 3,
                             }}
                           >
-                            <ForwardToInboxIcon sx={{ color: "#b0cf00", fontSize: 35 }} />
+                            <ForwardToInboxIcon
+                              sx={{ color: "#b0cf00", fontSize: 35 }}
+                            />
                           </Stack>
                           <Stack>
                             <Typography
@@ -82,11 +96,11 @@ const Contact = () => {
                               variant="h5"
                               sx={{
                                 color: "#BCBCBC80",
-                                fontFamily: "Inter, sans-serif",
                                 fontSize: { xs: "11px", md: "14px" },
                                 fontWeight: 400,
                                 textAlign: "start",
                                 lineHeight: "1.2em",
+                                fontFamily: '"Inter", sans-serif',
                               }}
                             >
                               {item.name}
@@ -153,10 +167,21 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.5, duration: 0.6 }}
                 >
-                  <Stack direction={"row"} spacing={4} sx={{ display: "flex", justifyContent: "center", alignItems: "center", padding: 2, borderRadius: 5 }}>
+                  <Stack
+                    direction={"row"}
+                    spacing={4}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      padding: 2,
+                      borderRadius: 5,
+                    }}
+                  >
                     <Card
                       sx={{
-                        backgroundColor: "#2a2a2a",
+                        backgroundColor: "rgba(76, 86, 111, 0.5)",
+                        backdropFilter: "blur(1px)",
                         borderWidth: 1,
                         borderStyle: "solid",
                         borderColor: "#414141",
@@ -164,13 +189,22 @@ const Contact = () => {
                         borderRadius: 3,
                       }}
                     >
-                      <a href="https://www.linkedin.com/in/thisissmohan" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-                        <LinkedInIcon sx={{ color: "#fff", fontSize: 40 }} className="arrow-icon" />
+                      <a
+                        href="https://www.linkedin.com/in/thisissmohan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none" }}
+                      >
+                        <LinkedInIcon
+                          sx={{ color: "#fff", fontSize: 40 }}
+                          className="arrow-icon"
+                        />
                       </a>
                     </Card>
                     <Card
                       sx={{
-                        backgroundColor: "#2a2a2a",
+                        backgroundColor: "rgba(76, 86, 111, 0.5)",
+                        backdropFilter: "blur(1px)",
                         borderWidth: 1,
                         borderStyle: "solid",
                         borderColor: "#414141",
@@ -178,8 +212,20 @@ const Contact = () => {
                         borderRadius: 3,
                       }}
                     >
-                      <a href="mailto:thisissmohan@gmail.com" style={{ textDecoration: "none" }}>
-                        <img src={Email} alt="Email" style={{ height: 40, width: 40, backgroundColor: "#fff", borderRadius: 50 }} />
+                      <a
+                        href="mailto:thisissmohan@gmail.com"
+                        style={{ textDecoration: "none" }}
+                      >
+                        <img
+                          src={Email}
+                          alt="Email"
+                          style={{
+                            height: 40,
+                            width: 40,
+                            backgroundColor: "#fff",
+                            borderRadius: 50,
+                          }}
+                        />
                       </a>
                     </Card>
                   </Stack>
@@ -195,11 +241,27 @@ const Contact = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2, duration: 0.5 }}
             >
-              <Card sx={{ height: { xs: "auto", md: "auto" }, backgroundColor: "#212121", padding: 2, borderRadius: 7 }}>
+              <Card
+                sx={{
+                  height: { xs: "auto", md: "auto" },
+                  backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
+                  padding: 2,
+                  borderRadius: 7,
+                }}
+              >
                 <Stack>
                   <CardContent>
                     <Stack spacing={1}>
-                      <Stack direction={"row"} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
+                      <Stack
+                        direction={"row"}
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          width: "100%",
+                        }}
+                      >
                         <Typography
                           gutterBottom
                           variant="h5"
@@ -212,37 +274,89 @@ const Contact = () => {
                             lineHeight: "25px",
                           }}
                         >
-                          Let's work <span style={{ color: "#b0cf00" }}>together</span>.
+                          Let's work{" "}
+                          <span style={{ color: "#b0cf00" }}>together</span>.
                         </Typography>
-                        <Box component="img" src="https://hamzajanjua.com/wp-content/uploads/2023/12/icon2.png.webp" alt="SVG Example" height="70px" sx={{ borderRadius: 2 }} />
+                        <Box
+                          component="img"
+                          src="https://hamzajanjua.com/wp-content/uploads/2023/12/icon2.png.webp"
+                          alt="SVG Example"
+                          height="70px"
+                          sx={{ borderRadius: 2 }}
+                        />
                       </Stack>
 
-                      <TextField variant="standard" placeholder="Name *" InputProps={{ disableUnderline: true }} sx={{ "& .MuiInputBase-root": { backgroundColor: "#242424", borderRadius: 3, color: "#fff", height: "60px", padding: "8px 12px" }, "& .MuiInputBase-input": { fontSize: "16px" } }} />
-                      <TextField variant="standard" placeholder="Email *" InputProps={{ disableUnderline: true }} sx={{ "& .MuiInputBase-root": { backgroundColor: "#242424", borderRadius: 3, color: "#fff", height: "60px", padding: "8px 12px" }, "& .MuiInputBase-input": { fontSize: "16px" } }} />
                       <TextField
-                          variant="standard"
-                          placeholder="Your Message"
-                          InputProps={{
-                            disableUnderline: true,
-                          }}
-                          multiline
-                          minRows={4}
-                          sx={{
-                            "& .MuiInputBase-root": {
-                              // backgroundColor: "#242424",
-                              // borderRadius: 3,
-                              color: "#fff",
-                              height: "60px",
-                              padding: "8px 12px",
-                              marginTop: 4,
-                            },
-                            "& .MuiInputBase-input": {
-                              fontSize: "16px",
-                            },
-                          }}
-                        />
+                        variant="standard"
+                        placeholder="Name *"
+                        InputProps={{ disableUnderline: true }}
+                        sx={{
+                          "& .MuiInputBase-root": {
+                            backgroundColor: "#262B3F",
+                            borderRadius: 3,
+                            color: "#fff",
+                            height: "60px",
+                            padding: "8px 12px",
+                            fontFamily: '"Inter", sans-serif',
+                          },
+                          "& .MuiInputBase-input": { fontSize: "16px" },
+                        }}
+                      />
+                      <TextField
+                        variant="standard"
+                        placeholder="Email *"
+                        InputProps={{ disableUnderline: true }}
+                        sx={{
+                          "& .MuiInputBase-root": {
+                            backgroundColor: "#262B3F",
+                            borderRadius: 3,
+                            color: "#fff",
+                            height: "60px",
+                            padding: "8px 12px",
+                            fontFamily: '"Inter", sans-serif',
+                          },
+                          "& .MuiInputBase-input": { fontSize: "16px" },
+                        }}
+                      />
+                      <TextField
+                        variant="standard"
+                        placeholder="Your Message"
+                        InputProps={{
+                          disableUnderline: true,
+                        }}
+                        multiline
+                        minRows={4}
+                        sx={{
+                          "& .MuiInputBase-root": {
+                            // backgroundColor: "#242424",
+                            // borderRadius: 3,
+                            fontFamily: '"Inter", sans-serif',
+                            color: "#fff",
+                            height: "60px",
+                            padding: "8px 12px",
+                            marginTop: 4,
+                          },
+                          "& .MuiInputBase-input": {
+                            fontSize: "16px",
+                          },
+                        }}
+                      />
                     </Stack>
-                    <Button variant="contained" color="success" sx={{ marginTop: 3, padding: "12px 25px", fontWeight: 700, fontSize: 16, textTransform: "capitalize", borderRadius: 5, backgroundColor: "#38a169", "&:hover": { backgroundColor: "#4C9B67" } }}>
+                    <Button
+                      variant="contained"
+                      color="success"
+                      sx={{
+                        marginTop: 3,
+                        padding: "12px 25px",
+                        fontWeight: 700,
+                        fontSize: 16,
+                        textTransform: "capitalize",
+                        borderRadius: 5,
+                        backgroundColor: "#38a169",
+                        fontFamily: '"Inter", sans-serif',
+                        "&:hover": { backgroundColor: "#4C9B67" },
+                      }}
+                    >
                       Send
                     </Button>
                   </CardContent>

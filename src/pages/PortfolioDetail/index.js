@@ -19,6 +19,90 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Email from "../../assets/images/email.png";
 
+// cardData.js
+
+export const cardData = [
+  {
+    title: "Project Overview",
+    content: `InvestPulse was created to address a common challenge faced by real estate investors: managing property finances across multiple spreadsheets and systems. As the lead developer, my task was to design an intuitive and efficient web platform that consolidates investment data, automates financial tracking, and provides actionable insights. The goal was to create a centralized, user-friendly solution tailored specifically to real estate investors, enabling them to view and analyze the financial health of their portfolios in real time.`,
+  },
+
+  {
+    title: "Challenges",
+    content: `This project came with several unique challenges:
+    
+    1. **Real-Time Data Updates**  
+       Financial data needed to be accurate and constantly updated without manual refreshes, requiring a robust backend design.
+    
+    2. **User-Friendly Design for Complex Data**  
+       Translating complex financial metrics into an accessible format without overwhelming users was essential.
+    
+    3. **High-Level Security**  
+       Given the sensitivity of financial information, we prioritized data protection through encryption and other security measures.`,
+  },
+  {
+    title: "Approach",
+    content: `To address these challenges, we implemented the following development strategies:
+    
+    1. **Agile Development**  
+       We followed agile methodology, allowing us to iterate quickly, test features, and gather feedback at every stage.
+    
+    2. **Frontend and UX Collaboration**  
+       Working closely with UX/UI designers, we created a dashboard that displayed financial insights in a digestible format, while maintaining a minimalist, professional look.
+    
+    3. **API and Data Handling**  
+       Using **Node.js** and **MongoDB**, we built a backend that facilitated real-time data synchronization and efficient data retrieval, ensuring a seamless user experience.
+    
+    4. **Advanced Security Protocols**  
+       Data security was a top priority. We integrated encryption and regular auditing practices, meeting industry standards for safeguarding sensitive financial data.`,
+  },
+  {
+    title: "Solution",
+    content: `InvestPulse provides an all-in-one platform for real estate investors to:
+    
+    1. **View Financial Metrics in Real Time**  
+       The dashboard displays key metrics like rental income, expenses, and net cash flow in real time.
+    
+    2. **Simplify Financial Management**  
+       With automated financial summaries and reports, users can manage their portfolios effortlessly, without relying on spreadsheets.
+    
+    3. **Receive Data-Driven Insights**  
+       Built-in alerts and notifications prompt users to take action or review performance, enhancing the decision-making process.
+    
+    4. **Ensure Secure Data Handling**  
+       With encrypted storage and secure access controls, users have peace of mind knowing their information is well-protected.`,
+  },
+  {
+    title: "Technologies Used",
+    content: `The technology stack for InvestPulse includes:
+    
+    - **React.js**  
+      For a responsive, interactive frontend.
+    
+    - **Node.js and Express.js**  
+      For backend management, API integrations, and real-time data handling.
+    
+    - **MongoDB**  
+      For flexible data storage that supports complex property and financial records.
+    
+    - **AWS**  
+      For secure, scalable cloud deployment.`,
+  },
+  {
+    title: "Conclusion",
+    content: `InvestPulse has successfully streamlined the way investors manage their property portfolios, offering a comprehensive yet simple tool that brings all critical data together in one place. Through developing InvestPulse, I had the opportunity to:
+    
+    - **Tackle complex financial challenges.**
+    - **Optimize a real-time user experience.**
+    - **Ensure top-level security.**
+    
+    Ultimately, this robust solution makes property management straightforward and insightful for investors.`,
+  },
+];
+
+
+
+
 const cardData1 = [
   {
     dob: "Nov 2019 - Present",
@@ -62,231 +146,141 @@ const PortfolioDetail = () => {
   return (
     <Box sx={{ marginTop: { xs: 3, md: 7 }, marginBottom: 10 }}>
       <Container>
+        {/* Header Section */}
         <Grid container spacing={3}>
-          <Grid item xs={12} md={12}>
-            <Grid container spacing={3}>
-              <Grid item xs={12}>
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1 }}
-                >
-                  <Stack spacing={3}>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        textTransform: "uppercase",
-                        color: "#BCBCBC80",
-                        fontFamily: "Inter, sans-serif",
-                        fontSize: { xs: "12px", md: "14px" },
-                        fontWeight: 500,
-                        lineHeight: "1.2em",
-                        textAlign: "start",
-                      }}
-                    >
-                      {card.subtitle}
-                    </Typography>
-                    <Typography
-                      gutterBottom
-                      variant="h5"
-                      sx={{
-                        color: "#ffff",
-                        fontFamily: "Inter, sans-serif",
-                        fontSize: { xs: "18px", md: "22px" },
-                        fontWeight: 500,
-                        textAlign: "start",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      {card.title}
-                    </Typography>
-                  </Stack>
-                </motion.div>
-              </Grid>
-
-              <Grid item xs={12}>
-                <Stack
-                  direction={"row"}
-                  width={"100%"}
+          <Grid item xs={12}>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeUpVariants}
+            >
+              <Stack spacing={3}>
+                <Typography
+                  variant="body2"
                   sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
+                    textTransform: "uppercase",
+                    color: "#BCBCBC80",
+                    fontFamily: "Inter, sans-serif",
+                    fontSize: { xs: "12px", md: "14px" },
+                    fontWeight: 500,
+                    lineHeight: "1.2em",
+                    textAlign: "start",
                   }}
                 >
-                  <Box
-                    component="img"
-                    src={card.image}
-                    alt="SVG Example"
-                    sx={{
-                      borderRadius: 2,
-                      width:
-                        card.subtitle === "Mobile App"
-                          ? { xs: "auto" }
-                          : { md: "100%" },
-                      height: "700px",
-                    }}
-                  />
-                </Stack>
-              </Grid>
-            </Grid>
+                  {card.subtitle}
+                </Typography>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: "#fff",
+                    fontFamily: "Inter, sans-serif",
+                    fontSize: { xs: "18px", md: "22px" },
+                    fontWeight: 500,
+                    textAlign: "start",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {card.title}
+                </Typography>
+              </Stack>
+            </motion.div>
           </Grid>
-        </Grid>
 
-        <Stack
-          mt={2}
-          sx={{
-            backgroundColor: "#1c1c1c",
-            padding: 4,
-            borderRadius: 10,
-          }}
-        >
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={5}>
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-              >
-                {/* Card 1 */}
-                <Card
-                  sx={{
-                    maxWidth: "100%",
-                    height: { xs: "auto", md: "auto" },
-                    backgroundColor: "#212121",
-                    padding: 2,
-                    borderRadius: 7,
-                  }}
-                >
-                  <Stack>
-                    <CardContent>
-                      <Typography
-                        gutterBottom
-                        variant="h5"
-                        sx={{
-                          color: "#fff",
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: { xs: "12px", md: "20px" },
-                          fontWeight: 500,
-                          textAlign: "start",
-                          lineHeight: "25px",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        Our Role
-                      </Typography>
-                      <Stack spacing={1} mt={3}>
-                        {cardData1.map((item, index) => (
-                          <Card
-                            key={index}
-                            sx={{
-                              backgroundColor: "#212121",
-                              padding: 2,
-                              borderRadius: 5,
-                            }}
-                          >
-                            <Typography
-                              variant="body2"
-                              sx={{
-                                color: "#FFFFFFC7;",
-                                fontFamily: "Inter, sans-serif",
-                                textAlign: "start",
-                                fontSize: "16px",
-                                lineHeight: "1.56em",
-                              }}
-                            >
-                              {item.subtitle}
-                            </Typography>
-                          </Card>
-                        ))}
-                      </Stack>
-                    </CardContent>
-                  </Stack>
-                </Card>
-              </motion.div>
-            </Grid>
-            <Grid item xs={"none"} md={2}>
+          {/* Image Section */}
+          <Grid item xs={12}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+            >
               <Stack
+                direction={"row"}
+                width={"100%"}
                 sx={{
                   display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "self-start",
-                  width: "100%",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
                 <Box
                   component="img"
-                  src="https://hamzajanjua.com/wp-content/uploads/2023/12/icon2.png.webp"
-                  alt="SVG Example"
-                  height="70px"
-                  sx={{ borderRadius: 2 }}
+                  src={card.image}
+                  alt="Portfolio Image"
+                  sx={{
+                    borderRadius: 2,
+                    width:
+                      card.subtitle === "Mobile App"
+                        ? { xs: "auto" }
+                        : { md: "100%" },
+                    height: "700px",
+                  }}
                 />
               </Stack>
-            </Grid>
-            <Grid item xs={12} sm={6} md={5}>
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-              >
-                {/* Card 2 */}
-                <Card
-                  sx={{
-                    maxWidth: "100%",
-                    height: { xs: "auto", md: "550px" },
-                    backgroundColor: "#212121",
-                    padding: 2,
-                    borderRadius: 7,
-                  }}
-                >
-                  <Stack>
-                    <CardContent>
-                      <Typography
-                        gutterBottom
-                        variant="h5"
-                        sx={{
-                          color: "#fff",
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: { xs: "12px", md: "20px" },
-                          fontWeight: 500,
-                          textAlign: "start",
-                          lineHeight: "25px",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        Client Description
-                      </Typography>
-                      <Stack spacing={1} mt={3}>
-                        {cardData2.map((item, index) => (
-                          <Card
-                            key={index}
-                            sx={{
-                              backgroundColor: "#212121",
-                              padding: 2,
-                              borderRadius: 5,
-                            }}
-                          >
-                            <Typography
-                              variant="body2"
-                              sx={{
-                                color: "#FFFFFFC7",
-                                fontFamily: "Inter, sans-serif",
-                                textAlign: "start",
-                                fontSize: "16px",
-                                lineHeight: "1.56em",
-                              }}
-                            >
-                              {item.subtitle}
-                            </Typography>
-                          </Card>
-                        ))}
-                      </Stack>
-                    </CardContent>
-                  </Stack>
-                </Card>
-              </motion.div>
-            </Grid>
+            </motion.div>
           </Grid>
+        </Grid>
+
+        {/* Card Section */}
+        <Stack mt={4} sx={{ borderRadius: 10 }}>
+        <Grid container spacing={2}>
+  {card && card.cardData &&
+    card.cardData.map((item, index) => (
+      <Grid item xs={12} md={6} key={index}>
+        <motion.div
+          initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: index * 0.2, // Staggering the animations
+          }}
+        >
+          <Card
+            sx={{
+              backgroundColor: "#4C566F",
+              padding: 2,
+              borderRadius: 7,
+              height: "100%", // Ensures the card takes full height of the grid cell
+              minHeight: "350px", // Ensures all cards are at least this height
+              display: "flex",
+              flexDirection: "column", // Ensures the content fills the card vertically
+            }}
+          >
+            <CardContent sx={{ flexGrow: 1 }}>
+              <Typography
+                variant="h5"
+                sx={{
+                  color: "#fff",
+                  fontFamily: "Inter, sans-serif",
+                  fontSize: { xs: "16px", md: "20px" },
+                  fontWeight: 500,
+                  textAlign: "start",
+                  lineHeight: "25px",
+                  textTransform: "uppercase",
+                }}
+              >
+                {item.title}
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  color: "#FFFFFFC7",
+                  fontFamily: "Inter, sans-serif",
+                  textAlign: "start",
+                  fontSize: "16px",
+                  lineHeight: "1.56em",
+                  whiteSpace: "pre-line",
+                  marginTop: 2,
+                }}
+              >
+                {item.content}
+              </Typography>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </Grid>
+    ))}
+</Grid>
+
         </Stack>
 
         <Grid container spacing={2} mt={2}>
@@ -297,7 +291,9 @@ const PortfolioDetail = () => {
                 sx={{
                   maxWidth: "100%",
                   height: { xs: "auto", md: "auto" },
-                  backgroundColor: "#212121",
+                  backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
+
                   padding: 2,
                   borderRadius: 7,
                   "&:hover .arrow-icon": {
@@ -313,14 +309,15 @@ const PortfolioDetail = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    backgroundColor: "#1d1d1d",
+                    backgroundColor: "#262b3f",
                     padding: 2,
                     borderRadius: 5,
                   }}
                 >
                   <Card
                     sx={{
-                      backgroundColor: "#2a2a2a",
+                      backgroundColor: "rgba(76, 86, 111, 0.5)",
+                      backdropFilter: "blur(1px)",
                       borderWidth: 1,
                       borderStyle: "solid",
                       borderColor: "#414141",
@@ -345,7 +342,8 @@ const PortfolioDetail = () => {
                   </Card>
                   <Card
                     sx={{
-                      backgroundColor: "#2a2a2a",
+                      backgroundColor: "rgba(76, 86, 111, 0.5)",
+                      backdropFilter: "blur(1px)",
                       borderWidth: 1,
                       borderStyle: "solid",
                       borderColor: "#414141",
@@ -438,7 +436,9 @@ const PortfolioDetail = () => {
                 sx={{
                   maxWidth: "100%",
                   height: { xs: "auto", md: "auto" },
-                  backgroundColor: "#212121",
+                  backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
+
                   padding: 2,
                   borderRadius: 7,
                   "&:hover .arrow-icon": {
@@ -518,78 +518,6 @@ const PortfolioDetail = () => {
               </Card>
             </motion.div>
           </Grid>
-
-          {/* <Grid
-            item
-            xs={12}
-            sm={6}
-            md={3}
-            onClick={() => navigate("/about-detail")}
-            sx={{cursor:'pointer'}}
-          >
-            <motion.div variants={fadeUpVariants} whileHover={{ scale: 1.05 }}>
-              <Card
-                sx={{
-                  maxWidth: "100%",
-                  height: { xs: "auto", md: "auto" },
-                  backgroundColor: "#212121",
-                  padding: 2,
-                  borderRadius: 7,
-                }}
-              >
-                <Stack>
-                  <CardContent>
-                    <Stack
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                      spacing={6}
-                    >
-                      <Box
-                        component="img"
-                        src="https://hamzajanjua.com/wp-content/uploads/2023/12/Untitled-400-%C3%97-200-px.png"
-                        alt="SVG Example"
-                        height="100px"
-                        sx={{ borderRadius: 2 }}
-                      />
-                    </Stack>
-                    <Stack spacing={1} mt={2}>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          textTransform: "uppercase",
-                          color: "#BCBCBC80",
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: { xs: "12px", md: "14px" },
-                          fontWeight: 500,
-                          lineHeight: "1.2em",
-                          textAlign: "start",
-                        }}
-                      >
-                        more about me
-                      </Typography>
-                      <Typography
-                        gutterBottom
-                        variant="h5"
-                        sx={{
-                          color: "#fff",
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: { xs: "12px", md: "20px" },
-                          fontWeight: 500,
-                          textAlign: "start",
-                          lineHeight: "25px",
-                        }}
-                      >
-                        Credentials
-                      </Typography>
-                    </Stack>
-                  </CardContent>
-                </Stack>
-              </Card>
-            </motion.div>
-          </Grid> */}
         </Grid>
       </Container>
     </Box>

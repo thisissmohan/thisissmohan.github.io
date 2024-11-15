@@ -86,7 +86,8 @@ const Services = () => {
                   sx={{
                     maxWidth: "100%",
                     height: { xs: "250px", md: "810px" },
-                    backgroundColor: "#161616",
+                    backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
                     padding: 2,
                     borderRadius: 7,
                     display: "flex",
@@ -174,7 +175,9 @@ const Services = () => {
 
               <Stack
                 sx={{
-                  backgroundColor: "#181818",
+                  backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
+
                   padding: 4,
                   borderRadius: 8,
                 }}
@@ -190,7 +193,8 @@ const Services = () => {
                           sx={{
                             maxWidth: "100%",
                             height: { xs: "auto", md: "300px" },
-                            backgroundColor: "#212121",
+                            backgroundColor: "rgba(76, 86, 111, 0.5)",
+                            backdropFilter: "blur(1px)",
                             padding: 2,
                             borderRadius: 7,
                           }}
@@ -234,313 +238,241 @@ const Services = () => {
           </Grid>
 
           <Grid container spacing={2} mt={2}>
-            <Grid item xs={12} sm={6} md={3} sx={{ cursor: "pointer" }}>
-              <motion.div
-                variants={fadeUpVariants}
-                whileHover={{ scale: 1.05 }}
-              >
-                <Card
-                  onClick={() => navigate("/contact")}
-                  sx={{
-                    maxWidth: "100%",
-                    height: { xs: "auto", md: "auto" },
-                    backgroundColor: "#212121",
-                    padding: 2,
-                    borderRadius: 7,
-                    "&:hover .arrow-icon": {
-                      color: "#fff",
-                      cursor: "pointer",
-                    },
-                  }}
-                >
-                  <Stack
-                    direction={"row"}
-                    spacing={4}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      backgroundColor: "#1d1d1d",
-                      padding: 2,
-                      borderRadius: 5,
-                    }}
-                  >
-                    <Card
-                      sx={{
-                        backgroundColor: "#2a2a2a",
-                        borderWidth: 1,
-                        borderStyle: "solid",
-                        borderColor: "#414141",
-                        padding: 2,
-                        borderRadius: 3,
-                      }}
-                    >
-                      <a
-                        href="https://www.linkedin.com/in/thisissmohan"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ textDecoration: "none" }}
-                      >
-                        <LinkedInIcon
-                          sx={{
-                            color: "#fff",
-                            fontSize: 40,
-                          }}
-                          className="arrow-icon"
-                        />
-                      </a>
-                    </Card>
-                    <Card
-                      sx={{
-                        backgroundColor: "#2a2a2a",
-                        borderWidth: 1,
-                        borderStyle: "solid",
-                        borderColor: "#414141",
-                        padding: 2,
-                        borderRadius: 3,
-                      }}
-                    >
-                      <a
-                        href="mailto:thisissmohan@gmail.com"
-                        style={{ textDecoration: "none" }}
-                      >
-                        <img
-                          src={Email}
-                          alt="Email"
-                          style={{
-                            height: 50,
-                            width: 50,
-                            backgroundColor: "#fff",
-                            borderRadius: 50,
-                          }}
-                        />
-                      </a>
-                    </Card>
-                  </Stack>
-                  <Stack>
-                    <CardContent>
-                      <Stack
-                        spacing={1}
-                        mt={1}
-                        direction={"row"}
-                        sx={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          alignItems: "flex-end",
-                          "&:hover .arrow-icon": {
-                            color: "#fff",
-                            cursor: "pointer",
-                          },
-                        }}
-                      >
-                        <Stack>
-                          <Typography
-                            variant="body2"
-                            sx={{
-                              textTransform: "uppercase",
-                              color: "#BCBCBC80",
-                              fontFamily: "Inter, sans-serif",
-                              fontSize: { xs: "12px", md: "14px" },
-                              fontWeight: 500,
-                              lineHeight: "1.2em",
-                              textAlign: "start",
-                            }}
-                          >
-                            STAY WITH ME
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            sx={{
-                              color: "#fff",
-                              fontFamily: "Inter, sans-serif",
-                              fontSize: { xs: "12px", md: "20px" },
-                              fontWeight: 500,
-                              textAlign: "start",
-                              lineHeight: "25px",
-                            }}
-                          >
-                            Profiles
-                          </Typography>
-                        </Stack>
-
-                        <ArrowForwardIcon
-                          sx={{
-                            color: "#BCBCBC", // Set icon color to light gray initially
-                            fontSize: 40,
-                          }}
-                          className="arrow-icon" // Add a class to target the icon
-                        />
-                      </Stack>
-                    </CardContent>
-                  </Stack>
-                </Card>
-              </motion.div>
-            </Grid>
-
-            <Grid item xs={12} sm={12} md={9} sx={{ cursor: "pointer" }}>
-              <motion.div
-                variants={fadeUpVariants}
-                whileHover={{ scale: 1.05 }}
-              >
-                <Card
-                  onClick={() => navigate("/contact")}
-                  sx={{
-                    maxWidth: "100%",
-                    height: { xs: "auto", md: "auto" },
-                    backgroundColor: "#212121",
-                    padding: 2,
-                    borderRadius: 7,
-                    "&:hover .arrow-icon": {
-                      color: "#fff",
-                    },
-                  }}
-                >
-                  <Stack
-                    sx={{
-                      display: "flex",
-                      justifyContent: "flex-start",
-                      alignItems: "self-start",
-                      width: "100%",
-                    }}
-                  >
-                    <Box
-                      component="img"
-                      src="https://hamzajanjua.com/wp-content/uploads/2023/12/icon2.png.webp"
-                      alt="SVG Example"
-                      height="70px"
-                      sx={{ borderRadius: 2 }}
-                    />
-                  </Stack>
-                  <Stack>
-                    <CardContent>
-                      <Stack
-                        spacing={1}
-                        direction={"row"}
-                        mt={2}
-                        sx={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          alignItems: "flex-end",
-                        }}
-                      >
-                        <Stack>
-                          <Typography
-                            variant="body2"
-                            sx={{
-                              textTransform: "uppercase",
-                              color: "#BCBCBC80",
-                              fontFamily: "Inter, sans-serif",
-                              fontSize: { xs: "25px", md: "44px" },
-                              fontWeight: 500,
-                              lineHeight: "1.2em",
-                              textAlign: "start",
-                            }}
-                          >
-                            Let's
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            sx={{
-                              color: "#fff",
-                              fontFamily: "Inter, sans-serif",
-                              fontSize: { xs: "25px", md: "44px" },
-                              fontWeight: 500,
-                              textAlign: "start",
-                              lineHeight: "25px",
-                            }}
-                          >
-                            work{" "}
-                            <span style={{ color: "#b0cf00" }}>together</span>.
-                          </Typography>
-                        </Stack>
-                        <ArrowForwardIcon
-                          sx={{
-                            color: "#BCBCBC", // Set icon color to light gray initially
-                            fontSize: 40,
-                          }}
-                          className="arrow-icon" // Add a class to target the icon
-                        />
-                      </Stack>
-                    </CardContent>
-                  </Stack>
-                </Card>
-              </motion.div>
-            </Grid>
-
-            {/* <Grid
-            item
-            xs={12}
-            sm={6}
-            md={3}
-            onClick={() => navigate("/about-detail")}
-            sx={{cursor:'pointer'}}
-          >
+          <Grid item xs={12} sm={6} md={3} sx={{ cursor: "pointer" }}>
             <motion.div variants={fadeUpVariants} whileHover={{ scale: 1.05 }}>
               <Card
+                onClick={() => navigate("/contact")}
                 sx={{
                   maxWidth: "100%",
                   height: { xs: "auto", md: "auto" },
-                  backgroundColor: "#212121",
+                  backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
+
                   padding: 2,
                   borderRadius: 7,
+                  "&:hover .arrow-icon": {
+                    color: "#fff",
+                    cursor: "pointer",
+                  },
                 }}
               >
+                <Stack
+                  direction={"row"}
+                  spacing={4}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#262b3f",
+                    padding: 2,
+                    borderRadius: 5,
+                  }}
+                >
+                  <Card
+                    sx={{
+                      backgroundColor: "rgba(76, 86, 111, 0.5)",
+                      backdropFilter: "blur(1px)",
+                      borderWidth: 1,
+                      borderStyle: "solid",
+                      borderColor: "#414141",
+                      padding: 2,
+                      borderRadius: 3,
+                    }}
+                  >
+                    <a
+                      href="https://www.linkedin.com/in/thisissmohan"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <LinkedInIcon
+                        sx={{
+                          color: "#fff",
+                          fontSize: 40,
+                        }}
+                        className="arrow-icon"
+                      />
+                    </a>
+                  </Card>
+                  <Card
+                    sx={{
+                      backgroundColor: "rgba(76, 86, 111, 0.5)",
+                      backdropFilter: "blur(1px)",
+                      borderWidth: 1,
+                      borderStyle: "solid",
+                      borderColor: "#414141",
+                      padding: 2,
+                      borderRadius: 3,
+                    }}
+                  >
+                    <a
+                      href="mailto:thisissmohan@gmail.com"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <img
+                        src={Email}
+                        alt="Email"
+                        style={{
+                          height: 50,
+                          width: 50,
+                          backgroundColor: "#fff",
+                          borderRadius: 50,
+                        }}
+                      />
+                    </a>
+                  </Card>
+                </Stack>
                 <Stack>
                   <CardContent>
                     <Stack
+                      spacing={1}
+                      mt={1}
+                      direction={"row"}
                       sx={{
                         display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                      spacing={6}
-                    >
-                      <Box
-                        component="img"
-                        src="https://hamzajanjua.com/wp-content/uploads/2023/12/Untitled-400-%C3%97-200-px.png"
-                        alt="SVG Example"
-                        height="100px"
-                        sx={{ borderRadius: 2 }}
-                      />
-                    </Stack>
-                    <Stack spacing={1} mt={2}>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          textTransform: "uppercase",
-                          color: "#BCBCBC80",
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: { xs: "12px", md: "14px" },
-                          fontWeight: 500,
-                          lineHeight: "1.2em",
-                          textAlign: "start",
-                        }}
-                      >
-                        more about me
-                      </Typography>
-                      <Typography
-                        gutterBottom
-                        variant="h5"
-                        sx={{
+                        justifyContent: "space-between",
+                        alignItems: "flex-end",
+                        "&:hover .arrow-icon": {
                           color: "#fff",
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: { xs: "12px", md: "20px" },
-                          fontWeight: 500,
-                          textAlign: "start",
-                          lineHeight: "25px",
+                          cursor: "pointer",
+                        },
+                      }}
+                    >
+                      <Stack>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            textTransform: "uppercase",
+                            color: "#BCBCBC80",
+                            fontFamily: "Inter, sans-serif",
+                            fontSize: { xs: "12px", md: "14px" },
+                            fontWeight: 500,
+                            lineHeight: "1.2em",
+                            textAlign: "start",
+                          }}
+                        >
+                          STAY WITH ME
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          sx={{
+                            color: "#fff",
+                            fontFamily: "Inter, sans-serif",
+                            fontSize: { xs: "12px", md: "20px" },
+                            fontWeight: 500,
+                            textAlign: "start",
+                            lineHeight: "25px",
+                          }}
+                        >
+                          Profiles
+                        </Typography>
+                      </Stack>
+
+                      <ArrowForwardIcon
+                        sx={{
+                          color: "#BCBCBC", // Set icon color to light gray initially
+                          fontSize: 40,
                         }}
-                      >
-                        Credentials
-                      </Typography>
+                        className="arrow-icon" // Add a class to target the icon
+                      />
                     </Stack>
                   </CardContent>
                 </Stack>
               </Card>
             </motion.div>
-          </Grid> */}
           </Grid>
+
+          <Grid item xs={12} sm={12} md={9} sx={{ cursor: "pointer" }}>
+            <motion.div variants={fadeUpVariants} whileHover={{ scale: 1.05 }}>
+              <Card
+                onClick={() => navigate("/contact")}
+                sx={{
+                  maxWidth: "100%",
+                  height: { xs: "auto", md: "auto" },
+                  backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
+
+                  padding: 2,
+                  borderRadius: 7,
+                  "&:hover .arrow-icon": {
+                    color: "#fff",
+                  },
+                }}
+              >
+                <Stack
+                  sx={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    alignItems: "self-start",
+                    width: "100%",
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src="https://hamzajanjua.com/wp-content/uploads/2023/12/icon2.png.webp"
+                    alt="SVG Example"
+                    height="70px"
+                    sx={{ borderRadius: 2 }}
+                  />
+                </Stack>
+                <Stack>
+                  <CardContent>
+                    <Stack
+                      spacing={1}
+                      direction={"row"}
+                      mt={2}
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "flex-end",
+                      }}
+                    >
+                      <Stack>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            textTransform: "uppercase",
+                            color: "#BCBCBC80",
+                            fontFamily: "Inter, sans-serif",
+                            fontSize: { xs: "25px", md: "44px" },
+                            fontWeight: 500,
+                            lineHeight: "1.2em",
+                            textAlign: "start",
+                          }}
+                        >
+                          Let's
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          sx={{
+                            color: "#fff",
+                            fontFamily: "Inter, sans-serif",
+                            fontSize: { xs: "25px", md: "44px" },
+                            fontWeight: 500,
+                            textAlign: "start",
+                            lineHeight: "25px",
+                          }}
+                        >
+                          work{" "}
+                          <span style={{ color: "#b0cf00" }}>together</span>.
+                        </Typography>
+                      </Stack>
+                      <ArrowForwardIcon
+                        sx={{
+                          color: "#BCBCBC", // Set icon color to light gray initially
+                          fontSize: 40,
+                        }}
+                        className="arrow-icon" // Add a class to target the icon
+                      />
+                    </Stack>
+                  </CardContent>
+                </Stack>
+              </Card>
+            </motion.div>
+          </Grid>
+        </Grid>
         </Container>
       </Box>
     </motion.div>

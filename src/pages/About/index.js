@@ -1,8 +1,9 @@
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {
   Box,
   Card,
   CardContent,
-  CardMedia,
   Container,
   Divider,
   Grid,
@@ -10,16 +11,11 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { motion } from "framer-motion";
 import React, { useEffect } from "react";
-import Footer from "../../common/footer";
-import Linkedin from "../../assets/images/linkedin.png";
-import Email from "../../assets/images/email.png";
-import AirplayIcon from "@mui/icons-material/Airplay";
-import { color, motion } from "framer-motion";
-import Mohan from "../../assets/images/mohan.png";
 import { useNavigate } from "react-router-dom";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Email from "../../assets/images/email.png";
+import Mohan from "../../assets/images/mohan.png";
 const cardData1 = [
   {
     title: "Frontend Development",
@@ -114,12 +110,13 @@ const About = () => {
                     sx={{
                       maxWidth: "100%",
                       height: { xs: "auto", md: "460px" },
-                      backgroundColor: "#161616",
+                      backgroundColor: "rgba(76, 86, 111, 0.5)",
+                      backdropFilter: "blur(1px)",
                       padding: 2,
                       borderRadius: 7,
                       borderWidth: 1.5,
                       borderStyle: "solid",
-                      borderColor: "#282828",
+                      borderColor: "#4C566F",
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "flex-start",
@@ -221,7 +218,8 @@ const About = () => {
                   <Card
                     sx={{
                       height: { xs: "auto", md: "auto" },
-                      backgroundColor: "#212121",
+                      backgroundColor: "rgba(76, 86, 111, 0.5)",
+                      backdropFilter: "blur(1px)",
                       padding: 2,
                       borderRadius: 7,
                     }}
@@ -309,9 +307,10 @@ const About = () => {
                 sx={{
                   maxWidth: "100%",
                   height: { xs: "auto", md: "auto" },
-                  backgroundColor: "#212121",
-                  padding: {xs:0,md:2},
-                  
+                  backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
+                  padding: { xs: 0, md: 2 },
+
                   borderRadius: 7,
                 }}
               >
@@ -337,22 +336,23 @@ const About = () => {
                         <Card
                           key={index}
                           sx={{
-                            backgroundColor: "#212121",
-                            padding: {xs:1,md:3},
+                            backgroundColor: "rgba(76, 86, 111, 0.5)",
+                            backdropFilter: "blur(1px)",
+                            padding: { xs: 1, md: 3 },
                             borderRadius: 5,
                             marginBottom: 3,
-                            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.3)",
+                            // boxShadow: "0 4px 6px rgba(0, 0, 0, 0.3)",
                             transition: "transform 0.3s ease",
                             "&:hover": {
                               transform: "scale(1.05)",
-                              boxShadow: "0 6px 12px rgba(0, 0, 0, 0.4)",
+                              // boxShadow: "0 6px 12px rgba(0, 0, 0, 0.4)",
                             },
                           }}
                         >
                           <Typography
                             variant="body2"
                             sx={{
-                              color: "orange",
+                              color: "#3ccceb",
                               fontFamily: "Inter, sans-serif",
                               fontStyle: "italic",
                               marginBottom: 1,
@@ -368,6 +368,7 @@ const About = () => {
                               fontWeight: "bold",
                               marginBottom: 1,
                               textAlign: "start",
+                              fontFamily: '"Inter", sans-serif',
                             }}
                           >
                             {item.title}
@@ -427,8 +428,9 @@ const About = () => {
                 sx={{
                   maxWidth: "100%",
                   height: { xs: "auto", md: "auto" },
-                  backgroundColor: "#212121",
-                  padding: {xs:0,md:2},
+                  backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
+                  padding: { xs: 0, md: 2 },
                   borderRadius: 7,
                 }}
               >
@@ -454,16 +456,17 @@ const About = () => {
                         <Card
                           key={index}
                           sx={{
-                            backgroundColor: "#333333",
-                            padding: {xs:1,md:4},
+                            backgroundColor: "rgba(76, 86, 111, 0.5)",
+                            backdropFilter: "blur(1px)",
+                            padding: { xs: 1, md: 4 },
                             borderRadius: 8,
                             marginBottom: 4,
-                            boxShadow: "0 6px 12px rgba(0, 0, 0, 0.3)",
+                            // boxShadow: "0 6px 12px rgba(0, 0, 0, 0.3)",
                             transition:
                               "transform 0.3s ease, box-shadow 0.3s ease",
                             "&:hover": {
                               transform: "translateY(-5px)",
-                              boxShadow: "0 12px 24px rgba(0, 0, 0, 0.3)",
+                              // boxShadow: "0 12px 24px rgba(0, 0, 0, 0.3)",
                             },
                           }}
                         >
@@ -475,6 +478,7 @@ const About = () => {
                               marginBottom: 2,
                               fontSize: "1.25rem",
                               letterSpacing: "0.5px",
+                              fontFamily: '"Inter", sans-serif',
                             }}
                           >
                             {item.title}
@@ -505,7 +509,7 @@ const About = () => {
                                       display: "list-item",
                                       listStyleType: "square",
                                       padding: 0,
-                                      color: "orange",
+                                      color: "#3ccceb",
                                     }}
                                   >
                                     <Typography
@@ -514,6 +518,7 @@ const About = () => {
                                         color: "#E0E0E0",
                                         fontSize: "1.1rem",
                                         display: "inline",
+                                        fontFamily: '"Inter", sans-serif',
                                       }}
                                     >
                                       {sub.trim()}
@@ -547,22 +552,28 @@ const About = () => {
                     <Stack spacing={1} mt={1}>
                       <Card
                         sx={{
-                          backgroundColor: "#333333",
+                          backgroundColor: "rgba(76, 86, 111, 0.5)",
+                          backdropFilter: "blur(1px)",
                           padding: 4,
                           borderRadius: 8,
                           marginBottom: 4,
-                          boxShadow: "0 6px 12px rgba(0, 0, 0, 0.3)",
+
+                          // boxShadow: "0 6px 12px rgba(0, 0, 0, 0.3)",
                           transition:
                             "transform 0.3s ease, box-shadow 0.3s ease",
                           "&:hover": {
                             transform: "translateY(-5px)",
-                            boxShadow: "0 12px 24px rgba(0, 0, 0, 0.3)",
+                            // boxShadow: "0 12px 24px rgba(0, 0, 0, 0.3)",
                           },
                         }}
                       >
                         <Typography
                           variant="h6"
-                          sx={{ color: "#fff", textAlign: "left" }}
+                          sx={{
+                            color: "#fff",
+                            textAlign: "left",
+                            fontFamily: '"Inter", sans-serif',
+                          }}
                         >
                           UNDER GRADUATION (2013-2017)
                         </Typography>
@@ -570,7 +581,7 @@ const About = () => {
                           variant="body2"
                           sx={{
                             color: "#aaaaaa",
-                            fontFamily: "Inter, sans-serif",
+                            fontFamily: '"Inter", sans-serif',
                             textAlign: "left",
                           }}
                         >
@@ -596,17 +607,18 @@ const About = () => {
                       <Card
                         onClick={() => navigate("/")}
                         sx={{
-                          backgroundColor: "#333333",
+                          backgroundColor: "rgba(76, 86, 111, 0.5)",
+                          backdropFilter: "blur(1px)",
                           padding: 4,
                           borderRadius: 8,
                           marginBottom: 4,
                           cursor: "pointer",
-                          boxShadow: "0 6px 12px rgba(0, 0, 0, 0.3)",
+                          // boxShadow: "0 6px 12px rgba(0, 0, 0, 0.3)",
                           transition:
                             "transform 0.3s ease, box-shadow 0.3s ease",
                           "&:hover": {
                             transform: "translateY(-5px)",
-                            boxShadow: "0 12px 24px rgba(0, 0, 0, 0.3)",
+                            // boxShadow: "0 12px 24px rgba(0, 0, 0, 0.3)",
                           },
                         }}
                       >
@@ -646,7 +658,7 @@ const About = () => {
                                 width: "100%",
                               }}
                             >
-                              <span style={{ color: "orange" }}>Digital</span>{" "}
+                              <span style={{ color: "#3ccceb" }}>Digital</span>{" "}
                               Playground
                             </Typography>
                           </Stack>
@@ -668,14 +680,16 @@ const About = () => {
         </Grid>
 
         <Grid container spacing={2} mt={2}>
-          <Grid item xs={12} sm={6} md={3} sx={{cursor:'pointer'}}>
+          <Grid item xs={12} sm={6} md={3} sx={{ cursor: "pointer" }}>
             <motion.div variants={fadeUpVariants} whileHover={{ scale: 1.05 }}>
               <Card
                 onClick={() => navigate("/contact")}
                 sx={{
                   maxWidth: "100%",
                   height: { xs: "auto", md: "auto" },
-                  backgroundColor: "#212121",
+                  backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
+
                   padding: 2,
                   borderRadius: 7,
                   "&:hover .arrow-icon": {
@@ -691,14 +705,15 @@ const About = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    backgroundColor: "#1d1d1d",
+                    backgroundColor: "#262b3f",
                     padding: 2,
                     borderRadius: 5,
                   }}
                 >
                   <Card
                     sx={{
-                      backgroundColor: "#2a2a2a",
+                      backgroundColor: "rgba(76, 86, 111, 0.5)",
+                      backdropFilter: "blur(1px)",
                       borderWidth: 1,
                       borderStyle: "solid",
                       borderColor: "#414141",
@@ -723,7 +738,8 @@ const About = () => {
                   </Card>
                   <Card
                     sx={{
-                      backgroundColor: "#2a2a2a",
+                      backgroundColor: "rgba(76, 86, 111, 0.5)",
+                      backdropFilter: "blur(1px)",
                       borderWidth: 1,
                       borderStyle: "solid",
                       borderColor: "#414141",
@@ -809,14 +825,16 @@ const About = () => {
             </motion.div>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={9} sx={{cursor:'pointer'}}>
+          <Grid item xs={12} sm={12} md={9} sx={{ cursor: "pointer" }}>
             <motion.div variants={fadeUpVariants} whileHover={{ scale: 1.05 }}>
               <Card
                 onClick={() => navigate("/contact")}
                 sx={{
                   maxWidth: "100%",
                   height: { xs: "auto", md: "auto" },
-                  backgroundColor: "#212121",
+                  backgroundColor: "rgba(76, 86, 111, 0.5)",
+                  backdropFilter: "blur(1px)",
+
                   padding: 2,
                   borderRadius: 7,
                   "&:hover .arrow-icon": {
@@ -896,78 +914,6 @@ const About = () => {
               </Card>
             </motion.div>
           </Grid>
-
-          {/* <Grid
-            item
-            xs={12}
-            sm={6}
-            md={3}
-            onClick={() => navigate("/about-detail")}
-            sx={{cursor:'pointer'}}
-          >
-            <motion.div variants={fadeUpVariants} whileHover={{ scale: 1.05 }}>
-              <Card
-                sx={{
-                  maxWidth: "100%",
-                  height: { xs: "auto", md: "auto" },
-                  backgroundColor: "#212121",
-                  padding: 2,
-                  borderRadius: 7,
-                }}
-              >
-                <Stack>
-                  <CardContent>
-                    <Stack
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                      spacing={6}
-                    >
-                      <Box
-                        component="img"
-                        src="https://hamzajanjua.com/wp-content/uploads/2023/12/Untitled-400-%C3%97-200-px.png"
-                        alt="SVG Example"
-                        height="100px"
-                        sx={{ borderRadius: 2 }}
-                      />
-                    </Stack>
-                    <Stack spacing={1} mt={2}>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          textTransform: "uppercase",
-                          color: "#BCBCBC80",
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: { xs: "12px", md: "14px" },
-                          fontWeight: 500,
-                          lineHeight: "1.2em",
-                          textAlign: "start",
-                        }}
-                      >
-                        more about me
-                      </Typography>
-                      <Typography
-                        gutterBottom
-                        variant="h5"
-                        sx={{
-                          color: "#fff",
-                          fontFamily: "Inter, sans-serif",
-                          fontSize: { xs: "12px", md: "20px" },
-                          fontWeight: 500,
-                          textAlign: "start",
-                          lineHeight: "25px",
-                        }}
-                      >
-                        Credentials
-                      </Typography>
-                    </Stack>
-                  </CardContent>
-                </Stack>
-              </Card>
-            </motion.div>
-          </Grid> */}
         </Grid>
       </Container>
     </Box>

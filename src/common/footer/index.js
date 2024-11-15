@@ -36,9 +36,12 @@ const Footer = () => {
               height: "30px",
               borderRadius: 35,
               objectFit: "cover",
+              borderColor: "gray",
+              borderStyle: "solid",
+              borderWidth: 1,
             }}
           />
-          <Typography sx={{ color: "#fff" }}>Mohan.S</Typography>
+          <Typography sx={{ color: "#fff",  fontFamily: '"Inter", sans-serif', }}>Mohan.S</Typography>
         </Stack>
       </Stack>
 
