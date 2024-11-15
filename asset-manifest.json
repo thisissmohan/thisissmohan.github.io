@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f855e6bc.css",
+    "main.js": "/static/js/main.e9de35cb.js",
+    "static/js/381.7c9e949a.chunk.js": "/static/js/381.7c9e949a.chunk.js",
+    "static/js/718.9332e6d5.chunk.js": "/static/js/718.9332e6d5.chunk.js",
+    "static/js/453.5dba6bc4.chunk.js": "/static/js/453.5dba6bc4.chunk.js",
+    "static/media/corr.png": "/static/media/corr.0a29fda66a2e7a189a8c.png",
+    "static/media/pawdog.png": "/static/media/pawdog.db7a6532376bdc4e5532.png",
+    "static/media/momekzMobile.png": "/static/media/momekzMobile.05520e425538e5f2d508.png",
+    "static/media/autoShop.png": "/static/media/autoShop.c7df3b9ecdfad06f7b7a.png",
+    "static/media/autoshopmobile.png": "/static/media/autoshopmobile.b9e39084113f52b7270e.png",
+    "static/media/plspeak.png": "/static/media/plspeak.b7ce88264102f84045ff.png",
+    "static/media/ivpMobile.png": "/static/media/ivpMobile.e0fcbf2925f6cdbdfeb2.png",
+    "static/media/momekz.png": "/static/media/momekz.0dfb0302ba14ce4fede5.png",
+    "static/media/mahalola.png": "/static/media/mahalola.55e752791322f695f3ff.png",
+    "static/media/mahalolaMobile.png": "/static/media/mahalolaMobile.a9b87266ddbae3104c09.png",
+    "static/media/ivp.png": "/static/media/ivp.40a25a69b5a895d9c388.png",
+    "static/media/mohan.png": "/static/media/mohan.05b183c8f39d9f5c504e.png",
+    "static/media/opportunity.png": "/static/media/opportunity.59d21a3ec553463776e4.png",
+    "index.html": "/index.html",
+    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
+    "main.e9de35cb.js.map": "/static/js/main.e9de35cb.js.map",
+    "381.7c9e949a.chunk.js.map": "/static/js/381.7c9e949a.chunk.js.map",
+    "718.9332e6d5.chunk.js.map": "/static/js/718.9332e6d5.chunk.js.map",
+    "453.5dba6bc4.chunk.js.map": "/static/js/453.5dba6bc4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.e9de35cb.js"
+  ]
+}
