@@ -10,7 +10,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import motion for animations
 import Footer from "../../common/footer";
 import Linkedin from "../../assets/images/linkedin.png";
@@ -19,6 +19,8 @@ import AirplayIcon from "@mui/icons-material/Airplay";
 import ForwardToInboxIcon from "@mui/icons-material/ForwardToInbox";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Email from "../../assets/images/email.png";
+import axios from "axios";
+
 
 // Data for contact info
 const data = [
@@ -28,8 +30,39 @@ const data = [
 ];
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+ 
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await axios({
+        method: "POST",
+        url: "https://kiotac.com/api/contact",
+        data: formData,
+      });
+      // setCtx(false);
+      alert(
+        "Thank you for reaching out to us! We’ve received your message and will get back to you within the next 24 hours."
+      );
+    } catch (error) {
+      // alert("Failed to send message: " + error.message);
+    }
+  };
+
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top on component load
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -253,42 +286,12 @@ const Contact = () => {
                 <Stack>
                   <CardContent>
                     <Stack spacing={1}>
-                      <Stack
-                        direction={"row"}
-                        sx={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          alignItems: "center",
-                          width: "100%",
-                        }}
-                      >
-                        <Typography
-                          gutterBottom
-                          variant="h5"
-                          sx={{
-                            color: "#fff",
-                            fontFamily: "Inter, sans-serif",
-                            fontSize: { xs: "25px", md: "44px" },
-                            fontWeight: 500,
-                            textAlign: "start",
-                            lineHeight: "25px",
-                          }}
-                        >
-                          Let's work{" "}
-                          <span style={{ color: "#b0cf00" }}>together</span>.
-                        </Typography>
-                        <Box
-                          component="img"
-                          src="https://hamzajanjua.com/wp-content/uploads/2023/12/icon2.png.webp"
-                          alt="SVG Example"
-                          height="70px"
-                          sx={{ borderRadius: 2 }}
-                        />
-                      </Stack>
-
                       <TextField
                         variant="standard"
                         placeholder="Name *"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         InputProps={{ disableUnderline: true }}
                         sx={{
                           "& .MuiInputBase-root": {
@@ -305,6 +308,9 @@ const Contact = () => {
                       <TextField
                         variant="standard"
                         placeholder="Email *"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         InputProps={{ disableUnderline: true }}
                         sx={{
                           "& .MuiInputBase-root": {
@@ -321,6 +327,9 @@ const Contact = () => {
                       <TextField
                         variant="standard"
                         placeholder="Your Message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
                         InputProps={{
                           disableUnderline: true,
                         }}
@@ -328,8 +337,6 @@ const Contact = () => {
                         minRows={4}
                         sx={{
                           "& .MuiInputBase-root": {
-                            // backgroundColor: "#242424",
-                            // borderRadius: 3,
                             fontFamily: '"Inter", sans-serif',
                             color: "#fff",
                             height: "60px",
@@ -342,9 +349,16 @@ const Contact = () => {
                         }}
                       />
                     </Stack>
+                    {error && (
+                      <Typography color="error" sx={{ marginTop: 2 }}>
+                        {error}
+                      </Typography>
+                    )}
                     <Button
                       variant="contained"
                       color="success"
+                      onClick={handleSubmit}
+                      disabled={loading}
                       sx={{
                         marginTop: 3,
                         padding: "12px 25px",
@@ -352,12 +366,12 @@ const Contact = () => {
                         fontSize: 16,
                         textTransform: "capitalize",
                         borderRadius: 5,
-                        backgroundColor: "#38a169",
+                        backgroundColor: "#b0cf00",
                         fontFamily: '"Inter", sans-serif',
-                        "&:hover": { backgroundColor: "#4C9B67" },
+                        "&:hover": { backgroundColor: "#b0cf00" },
                       }}
                     >
-                      Send
+                      {loading ? "Sending..." : "Send"}
                     </Button>
                   </CardContent>
                 </Stack>
